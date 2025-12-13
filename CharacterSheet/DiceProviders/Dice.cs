@@ -1,6 +1,5 @@
 ﻿namespace CharacterSheet.DiceProviders;
 
-[Flags]
 public enum Dice
 {
     D4 = 4,
