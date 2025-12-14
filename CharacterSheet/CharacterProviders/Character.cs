@@ -2,24 +2,25 @@
 
 public class Character
 {
-    public required string Name { get; set; }
-    public Rank Rank { get; set; } = Rank.Novice;
+    public string Name { get; set; } = string.Empty;
     public int Experience { get; set; } = 0;
+    public Rank Rank { get; private set; } = Rank.Novice;
+    public int SkillPoints { get; private set; } = 0;
 
-    public Dictionary<string, Attribute> Attributes { get; set; }
-    public Dictionary<string, Skill> Skills { get; set; }
+    public Dictionary<string, Attribute> Attributes { get; private set; }
+    public Dictionary<string, Skill> Skills { get; private set; }
 
-    public bool InConsciousness { get; set; }
+    public bool InConsciousness { get; private set; }
 
     public int Bennies { get; set; } = 0;
     public int MaxBennies { get; set; } = 3;
 
     private int _wounds = 0;
-    public int Wounds 
+    public int Wounds
     {
         get
         {
-            return _wounds; 
+            return _wounds;
         }
         set
         {
